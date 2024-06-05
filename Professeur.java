@@ -1,26 +1,38 @@
-package com.devoirjava.entities;
+package Cours;
 
-public class Professeur extends Personne {
-    private final String grade;
-    private final String NCI;
-    public Professeur(int id, String nom,String prenom, String grade, String NCI){
-        super(id, nom, prenom);
-        this.grade = grade;
-        this.NCI = NCI;
+public class Professeur {
+    private int id;
+    private String nom;
+    private String prenom;
+    private String telephone;
+    public Professeur(int id, String nom, String prenom, String telephone) {
+        this.id = id;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.telephone = telephone;
     }
-    @Override
-    public String toString() {
-        return "id=" + id +
-                ", nom='" + nom + '\'' +
-                ", prenom='" + prenom + '\'' +
-                ", grade='" + grade + '\'' +
-                ", NCI='" + NCI + '\'';
+    public int getId() {
+        return id;
     }
-    
-       public String getGrade() {
-        return grade;
+    public void setId(int id) {
+        this.id = id;
     }
-       public String getNCI() {
-        return NCI;
+    public String getNom() {
+        return nom;
+    }
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+    public String getPrenom() {
+        return prenom;
+    }
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
+    }
+    public String getTelephone() {
+        return telephone;
+    }
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
     }
 }
